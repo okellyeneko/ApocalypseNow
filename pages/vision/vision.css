@@ -1,0 +1,298 @@
+/* fonts */
+
+@font-face {
+  font-family: apocalypse;
+  src: url(../../fonts/Apocalypse\ Now.ttf);
+}
+
+/* general css */
+
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  padding: 20px;
+}
+
+span {
+  font-size: 200px;
+  font-weight: 100;
+  font-family: 'apocalypse';
+}
+
+body {
+  background-color: black;
+}
+
+/* h2 {
+  font-size: 50px;
+  padding: 40px 0px;
+} */
+
+p {
+  font-size: 18px;
+}
+
+/* navigation */
+
+nav {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.menu{
+  background-color: rgba(0, 0, 0, 0.851);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.menu li {
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  font-size: 100px;
+  font-family: 'apocalypse';
+}
+
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 100px;
+  font-family: 'apocalypse';
+}
+
+.current {
+  color: rgb(147, 35, 27);
+}
+
+a:hover{
+  transition: all 0.2s ease-in-out;
+  color: rgb(147, 35, 27);
+}
+
+/* hamburger */
+
+.open-hamburger, .close-hamburger {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-hamburger {
+  top: 20px;
+  right: 20px;
+  transform: translateX(-50%);
+}
+
+.close-hamburger {
+  top: 15px;
+  right: 30px;
+  font-size: 2rem;
+}
+
+#checkInput {
+  display: none;
+}
+
+@media screen and (max-width: 1200px){
+
+  .nav-list {
+    display: flex;
+    justify-content: end;
+  }
+  .menu {
+    z-index: 1;
+    display: flex;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    padding: 10px;
+  }
+  .open-hamburger, .close-hamburger {
+    display: block;
+  }
+  #checkInput:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* Header  */
+
+#visionHeader {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* vision */
+
+#vision {
+  margin-bottom: 150px;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section div {
+  width: 90%;
+  margin: 15px;
+}
+
+.box1 {
+  display: flex;
+  justify-content: space-evenly;
+  object-fit: contain;
+}
+
+.box1 div p{
+  padding: 20px;
+}
+
+.box1 div img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+
+.box2 {
+  background-color: brown;
+  display: flex;
+  flex-direction: row;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgBox {
+  display: flex;
+  background-image: url(../../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1200px;
+}
+
+.imgBox h1 {
+  padding: 20px;
+}
+
+.textBox {
+  display: flex;
+  justify-content: center;
+  align-items:end;
+  flex-direction: column;
+}
+
+.textBox div {
+  padding-bottom: 80px;
+}
+
+.conclusion {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.videoSection {
+  background-color: brown;
+  width: 50%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+
+.videoSection h2, p {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .box1 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .box2, .box3 {
+    flex-direction: column;
+  }
+
+  .imgBox {
+    height: 500px;
+  }
+  .crazyCoppola img {
+    width: 80vw;
+  }
+  #visionHeader {
+    margin-top: 0px;
+  }
+  .videoSection {
+    background-color: brown;
+    width: 100%;
+    margin: 5px;
+  }
+  .videoSection iframe {
+    width: 80%;
+  }
+  
+}
+
+/* footer */
+
+#footer {
+  background-color: black;
+  padding: 20px;
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#footer p {
+  font-size: 15px;
+}
+.footerlinks {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.myLinks {
+  padding-top: 15px;
+  list-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  #footer  {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
