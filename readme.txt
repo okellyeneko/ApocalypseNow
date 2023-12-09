@@ -1,6 +1,7 @@
 
 APOCALYPSE NOW. 
-Check the website here: https://okellyeneko.github.io/ApocalypseNow/index.html
+Check the website here: 
+https://okellyeneko.github.io/ApocalypseNow/index.html
 Made by Eneko O'Kelly for Web Application Development course at UCD.
 
 To see the website: Open the index.html file (home page)
